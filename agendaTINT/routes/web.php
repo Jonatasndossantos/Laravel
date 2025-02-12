@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\http\Controler\registrarAtividadeControler;
 
 Route::get('/', function () {
     return view('paginas/index');
@@ -17,3 +18,5 @@ Route::get('/consultar', function () {
 Route::get('/editar', function () {
     return view('paginas/editar');
 });
+
+route::get('/cadastrar/salvar',[App\http\controllers\registrarAtividadeControler::class, 'store']);
